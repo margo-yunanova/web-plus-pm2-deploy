@@ -12,7 +12,7 @@ module.exports = {
       ref: DEPLOY_REF,
       repo: DEPLOY_REPO,
       path: DEPLOY_PATH,
-      "post-setup": `cd ${DEPLOY_PATH}/source && npm i && npm run build `,
+      "post-setup": `cd ${DEPLOY_PATH}/source/frontend && npm i && npm run build `,
     },
   },
 };
