@@ -2,11 +2,8 @@
   "name": "web_canonicals_ru",
   "version": "0.1.0",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy:scp": "cd ./frontend && npm run build && scp -Cr build/* margo@mesto.margo.nomoredomainsmonster.ru:/home/margo/mesto-frontend",
-    "deploy:front:pm": "pm2 deploy ./frontend/ecosystem.config.js production"
+    "deploy:front:scp": "cd ./frontend && npm run build && scp -Cr build/* margo@mesto.margo.nomoredomainsmonster.ru:/home/margo/mesto-frontend",
+    "deploy:front:pm": "pm2 deploy ./frontend/ecosystem.config.js production",
+    "deploy:back:pm":"pm2 deploy ./backend/ecosystem.config.js production"
   }
 }
