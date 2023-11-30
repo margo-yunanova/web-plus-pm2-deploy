@@ -18,7 +18,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy:gh": "npm run build && gh-pages -d dist",
-    "deploy:scp": "npm run build && scp -Cr dist/* margo@mesto.margo.nomoredomainsmonster.ru:/home/margo/mesto-frontend",
+    "deploy:scp": "npm run build && scp -Cr frontend/dist/* margo@mesto.margo.nomoredomainsmonster.ru:/home/margo/mesto-frontend",
     "deploy:pm": "pm2 deploy production update"
   },
   "eslintConfig": {
