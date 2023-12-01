@@ -12,7 +12,7 @@ module.exports = {
   apps: [
     {
       name: "api-service",
-      script: "./backend/dist/app.js",
+      script: "./dist/app.js",
     },
   ],
   deploy: {
