@@ -1,5 +1,6 @@
 {
-  "name": "web_canonicals_ru",
+  "name": "Mesto deploy",
+  "author": "Margo Yunanova",
   "version": "0.1.0",
   "scripts": {
     "deploy:front:scp": "cd ./frontend && npm run build && scp -Cr build/* margo@mesto.margo.nomoredomainsmonster.ru:/home/margo/mesto-frontend",
