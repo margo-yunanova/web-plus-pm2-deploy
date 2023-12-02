@@ -33,11 +33,11 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
   const [email, setEmail] = React.useState("");
 
+  const [token, setToken] = React.useState(() => localStorage.getItem("jwt"));
+
   const history = useHistory();
 
-
   React.useEffect(() => {
-    const token = localStorage.getItem("jwt");
     if (token) {
       api
         .checkToken(token)
@@ -58,10 +58,8 @@ function App() {
           console.log(err);
         });
     }
-  }, [history]);
+  }, [history, token]);
 
-
-  
   function handleEditProfileClick() {
     setIsEditProfilePopupOpen(true);
   }
@@ -157,6 +155,7 @@ function App() {
       .then((res) => {
         setIsLoggedIn(true);
         setEmail(email);
+        setToken(res.token);
         history.push("/");
       })
       .catch((err) => {
